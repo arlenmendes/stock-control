@@ -2,6 +2,13 @@
 
 @section('content')
     <a class="btn btn-primary" href="{{ route('product.index') }}">Voltar</a>
+    @if( isset($errors) && count($errors) > 0 )
+        <div class="alert alert-danger" >
+            @foreach( $errors->all() as $error)
+                <p>{{$error}}</p>
+            @endforeach
+        </div>
+    @endif
     @if(!isset($product))
         <h2>Cadastro de Produto</h2>
 
