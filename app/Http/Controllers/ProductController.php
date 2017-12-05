@@ -49,6 +49,7 @@ class ProductController extends Controller
         $data['preco_sugerido'] = str_replace(",", ".", $data['preco_sugerido']);
         $data['custo'] = str_replace(",", ".", $data['custo']);
         $this->product->create($data);
+
         return redirect()->route('product.index');
     }
 

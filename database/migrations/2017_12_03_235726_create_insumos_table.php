@@ -21,6 +21,20 @@ class CreateInsumosTable extends Migration
             $table->integer('quantidade');
             $table->timestamps();
         });
+
+        Schema::create('insumo_product', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('product_id')->unsigned();
+            $table->foreign('product_id')
+                        ->references('id')
+                        ->on('products')
+                        ->onDelete('cascade');
+            $table->integer('insumo_id')->unsigned();
+            $table->foreign('insumo_id')
+                        ->references('id')
+                        ->on('insumos')
+                        ->onDelete('cascade');
+        });
     }
 
     /**
@@ -31,5 +45,6 @@ class CreateInsumosTable extends Migration
     public function down()
     {
         Schema::dropIfExists('insumos');
+        Schema::dropIfExists('products_insumos');
     }
 }

@@ -35,7 +35,7 @@
         </div>
         <div class="form-group col-md-6">
             <label for="quantidade">Estoque</label>
-            <input required type="number" class="form-control" name="quantidade" id="quantidade" placeholder="Informe o estoque atual" value="0" disabled value="{{ $product->quantidade or old('quantidade') }}">
+            <input required type="number" class="form-control" name="quantidade" id="quantidade" placeholder="Informe o estoque atual" value="0" value="{{ $product->quantidade or old('quantidade') }}">
             <small id="emailHelp" class="form-text text-muted">O estoque deve ser gerenciado no painel de gestão de estoque</small>
         </div>
         <div class="form-group col-md-6">

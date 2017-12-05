@@ -18,4 +18,8 @@ class Product extends Model
             'custo',
             'preco_sugerido',
         ];
+
+    public function getInsumos() {
+        return $this->belongsToMany('App\Insumo');
+    }
 }
