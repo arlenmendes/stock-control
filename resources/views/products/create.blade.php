@@ -31,7 +31,7 @@
         </div>
         <div class="form-group col-md-6">
             <label for="quantidade_minima">Quantidade Mínima</label>
-            <input required type="number" class="form-control" name="quantidade_minima" id="quantidade_minima" placeholder="Informe a Quantidade Mínima" value="{{ $product->quantidade_minima or old('quantidade_minima') }}">
+            <input required type="number" min="0" class="form-control" name="quantidade_minima" id="quantidade_minima" placeholder="Informe a Quantidade Mínima" value="{{ $product->quantidade_minima or old('quantidade_minima') }}">
         </div>
         <div class="form-group col-md-6">
             <label for="quantidade">Estoque</label>
