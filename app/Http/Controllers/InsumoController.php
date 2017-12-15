@@ -106,4 +106,12 @@ class InsumoController extends Controller
     {
         //
     }
+
+    /**
+     * @return Insumo
+     */
+    public function getInsumo(): Insumo
+    {
+        return $this->insumo;
+    }
 }

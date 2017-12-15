@@ -14,8 +14,8 @@
                         </div>
                     @endif
 
-                        <a class="btn" href="{{ route('product.index') }}">Produtos</a>
-                        <a class="btn" href="{{ route('insumo.index') }}">Insumos</a>
+                        <a class="btn btn-primary" href="{{ route('product.index') }}">Produtos</a>
+                        <a class="btn btn-primary" href="{{ route('insumo.index') }}">Insumos</a>
                 </div>
             </div>
         </div>

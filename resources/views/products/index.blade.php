@@ -19,8 +19,13 @@
                         <th>{{ $product->id }}</th>
                         <th>{{ $product->nome }}</th>
                         <th>{{ $product->quantidade }}</th>
-                        <th>
+                        <th class="col-md-3">
                             <a class="btn btn-success" href="{{ route('product.show', $product->id) }}">DETALHES</a>
+                            <form action="{{ route('product.destroy', $product->id) }}" method="post">
+                                {!! method_field('delete') !!}
+                                {!! csrf_field() !!}
+                                <button class="btn btn-danger">REMOVER</button>
+                            </form>
                         </th>
                     </tr>
                 @endforeach

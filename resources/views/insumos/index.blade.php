@@ -19,6 +19,7 @@
                 <th>{{ $insumo->quantidade }}</th>
                 <th>
                     <a class="btn btn-success" href="{{ route('insumo.show', $insumo->id) }}">DETALHES</a>
+
                 </th>
             </tr>
         @endforeach

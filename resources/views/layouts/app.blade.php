@@ -29,7 +29,7 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                    <a class="navbar-brand" href="{{ url('/home') }}">
                         {{ config('app.name', 'Laravel') }}
                     </a>
                 </div>
@@ -47,6 +47,13 @@
                             <li><a href="{{ route('login') }}">Login</a></li>
                             {{--<li><a href="{{ route('register') }}">Register</a></li>--}}
                         @else
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle"data-toggle="dropdown" role="button" >Cadastros <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="{{ route('product.index') }}">Produtos</a></li>
+                                    <li><a href="{{ route('insumo.index') }}">Materia Prima</a></li>
+                                </ul>
+                            </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
                                     {{ Auth::user()->name }} <span class="caret"></span>

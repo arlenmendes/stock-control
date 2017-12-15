@@ -48,9 +48,9 @@ class ProductController extends Controller
         $data['preco_sugerido'] = str_replace("%", "", $data['preco_sugerido']);
         $data['preco_sugerido'] = str_replace(",", ".", $data['preco_sugerido']);
         $data['custo'] = str_replace(",", ".", $data['custo']);
-        $this->product->create($data);
+        $return = $this->product->create($data);
 
-        return redirect()->route('product.index');
+        return redirect()->route('product.show', $return->id);
     }
 
     /**
@@ -63,6 +63,7 @@ class ProductController extends Controller
     {
         $product = $this->product->find($id);
         $product['custo'] = str_replace(".", ",", $product['custo']);
+        $product['preco_sugerido'] = $product['preco_sugerido'] * (1 + $product['preco_sugerido'] / 100);
         $product['preco_sugerido'] = str_replace(".", ",", $product['preco_sugerido']);
         return view('products.show', compact('product'));
     }
@@ -108,6 +109,7 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $this->product->destroy($id);
+        return redirect()->route('product.index');
     }
 }

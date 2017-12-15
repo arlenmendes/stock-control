@@ -47,7 +47,6 @@
             <input required type="text"class="form-control percent" name="preco_sugerido" id="preco_sugerido" placeholder="Informe o Preço Sugerido" value="{{ $product->preco_sugerido or old('preco_sugerido') }}">
             <small id="preco_sugeridoHelp" class="form-text text-muted">Em porcentagem</small>
         </div>
-
-        <button class="btn btn-primary">SALVAR</button>
+            <button class="btn btn-primary">SALVAR</button>
     </form>
 @endsection
