@@ -29,6 +29,7 @@
                 <input required type="text" class="form-control" name="data_entrega" id="data_entrega" placeholder="dd/mm/AAAA" value="{{ $venda->data_entrega or old('data_entrega') }}">
             </div>
             <div class="form-group col-md-6">
+                <label for="">Status</label>
                 <select name="status" id="status" class="form-control">
                     <option value="">Selecione</option>
                     @foreach($status as $s)
