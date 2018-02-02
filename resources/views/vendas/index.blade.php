@@ -19,7 +19,7 @@
                     <th>{{ $venda->id }}</th>
                     <th>{{ $venda->cliente }}</th>
                     <th>R$ {{ $venda->preco_total }}</th>
-                    <th></th>
+                    <th>{{ $venda->data_venda }}</th>
                     <th>{{ $venda->data_entrega }}</th>
                     <th>
                         <a class="btn btn-success" href="{{ route('vendas.show', $venda->id) }}">DETALHES</a>
