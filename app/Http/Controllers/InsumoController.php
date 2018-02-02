@@ -104,7 +104,8 @@ class InsumoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $this->insumo->destroy($id);
+        return redirect()->route('insumo.index');
     }
 
     /**
