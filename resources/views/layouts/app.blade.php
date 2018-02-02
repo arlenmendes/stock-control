@@ -52,6 +52,7 @@
                                 <ul class="dropdown-menu">
                                     <li><a href="{{ route('product.index') }}">Produtos</a></li>
                                     <li><a href="{{ route('insumo.index') }}">Materia Prima</a></li>
+                                    <li><a href="{{ route('vendas.index') }}">Materia Prima</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">

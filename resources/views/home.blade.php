@@ -16,6 +16,7 @@
 
                         <a class="btn btn-primary" href="{{ route('product.index') }}">Produtos</a>
                         <a class="btn btn-primary" href="{{ route('insumo.index') }}">Matérias Primas</a>
+                        <a class="btn btn-primary" href="{{ route('vendas.index') }}">Vendas</a>
                 </div>
             </div>
         </div>
