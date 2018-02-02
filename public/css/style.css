@@ -4,3 +4,14 @@
 th {
     text-align: center;
 }
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.hover-linha:hover {
+    background-color: mintcream;
+}
+.btn-finalizar{
+    margin-left: 15px;
+}

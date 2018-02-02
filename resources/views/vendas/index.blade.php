@@ -23,11 +23,7 @@
                     <th>{{ $venda->data_entrega }}</th>
                     <th>
                         <a class="btn btn-success" href="{{ route('vendas.show', $venda->id) }}">DETALHES</a>
-                        <form action="{{ route('vendas.destroy', $venda->id) }}" method="post">
-                            {!! method_field('delete') !!}
-                            {!! csrf_field() !!}
-                            <button class="btn btn-danger">REMOVER</button>
-                        </form>
+
                     </th>
                 </tr>
             @endforeach

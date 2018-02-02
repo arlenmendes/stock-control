@@ -15,7 +15,7 @@
                     @endif
 
                         <a class="btn btn-primary" href="{{ route('product.index') }}">Produtos</a>
-                        <a class="btn btn-primary" href="{{ route('insumo.index') }}">Insumos</a>
+                        <a class="btn btn-primary" href="{{ route('insumo.index') }}">Matérias Primas</a>
                 </div>
             </div>
         </div>

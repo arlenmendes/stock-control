@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <a class="btn btn-primary" href="{{ route('product.index') }}">Voltar</a>
+    <a class="btn btn-primary" href="{{ route('insumo.index') }}">Voltar</a>
     @if( isset($errors) && count($errors) > 0 )
         <div class="alert alert-danger" >
             @foreach( $errors->all() as $error)
@@ -10,11 +10,11 @@
         </div>
     @endif
     @if(!isset($insumo))
-        <h2>Cadastrar Insumo</h2>
+        <h2>Cadastrar Matéria Prima</h2>
 
         <form action="{{route('insumo.store')}}" method="post">
     @else
-        <h2>Editar Insumo</h2>
+        <h2>Editar Matéria Prima</h2>
         <form action="{{route('insumo.update', $insumo->id)}}" method="post">
             {!! method_field('put') !!}
     @endif
